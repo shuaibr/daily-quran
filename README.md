@@ -11,27 +11,29 @@ This tool's primary purpose is to empower Muslim individuals to learn from the q
 3. Daily Wisdom:
     - The bot can send users a daily verse or reflection to promote spiritual engagement.
 
-4. Chapter Overview:
+4. Yearly Khatam (Finish reading the Quran every year):
+    - Get closer to Allah by subscribing to our Khatam feature. By only reading 20 verses a day, you can finish the Quran in one year.
+
+5. Chapter Overview:
     - Users can get a summary or overview of a specific chapter, including its themes and key verses.
 
-5. Translation Comparison:
+6. Translation Comparison:
     - Users can compare translations of a specific verse across different editions to understand the nuances of interpretation.
 
-6. Educational Quizzes:
+7. Educational Quizzes:
     - The bot can offer quizzes or trivia games based on Quranic verses to enhance users' knowledge in an interactive way.
 
-7. Quranic Challenges:
+8. Quranic Challenges:
     - Users can participate in challenges or competitions related to memorization, understanding, or reflection on Quranic verses.
 
-8. Community Engagement:
+9. Community Engagement:
     - The bot can facilitate discussions and forums where users can share their favorite verses, reflections, or insights.
 
-9. Custom Editions:
+10. Custom Editions:
     - Users can choose from a variety of editions, allowing them to explore different interpretations and linguistic styles.
 
-10. Language Support:
+11. Language Support:
     - Users can request verses in different languages, benefiting from translations that cater to diverse linguistic backgrounds.
-
 
 ### Prerequisites
 What things you need to install the software and how to install them
