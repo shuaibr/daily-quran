@@ -1,4 +1,4 @@
-# Dynamic Reader
+# Quran Daily
 This tool's primary purpose is to empower Muslim individuals to learn from the quran. 
 
 # Key Features 
