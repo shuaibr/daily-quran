@@ -2,37 +2,37 @@
 This tool's primary purpose is to empower Muslim individuals to learn from the quran. 
 
 # Key Features 
-1. Verse Lookup:
+1. Verse Lookup (Released):
     - Users can quickly look up specific verses using commands, providing the chapter and verse numbers.
 
-2. Random Verse:
+2. Random Verse (Released):
     - The bot can generate and display a random verse from any edition, offering users a daily dose of inspiration.
 
-3. Daily Wisdom:
+3. Daily Wisdom (Coming Soon):
     - The bot can send users a daily verse or reflection to promote spiritual engagement.
 
-4. Yearly Khatam (Finish reading the Quran every year):
-    - Get closer to Allah by subscribing to our Khatam feature. By only reading 20 verses a day, you can finish the Quran in one year.
+4. Yearly Khatam (Finish reading the Quran every year) (Coming Soon):
+    - Get closer to Allah by subscribing to our Khatam program. By only reading 20 verses a day, you can finish the Quran in one year.
 
-5. Chapter Overview:
+5. Chapter Overview (Coming Soon):
     - Users can get a summary or overview of a specific chapter, including its themes and key verses.
 
-6. Translation Comparison:
+6. Translation Comparison (Coming Soon):
     - Users can compare translations of a specific verse across different editions to understand the nuances of interpretation.
 
-7. Educational Quizzes:
+7. Educational Quizzes (Coming Soon):
     - The bot can offer quizzes or trivia games based on Quranic verses to enhance users' knowledge in an interactive way.
 
-8. Quranic Challenges:
+8. Quranic Challenges (Coming Soon):
     - Users can participate in challenges or competitions related to memorization, understanding, or reflection on Quranic verses.
 
-9. Community Engagement:
+9. Community Engagement (Coming Soon):
     - The bot can facilitate discussions and forums where users can share their favorite verses, reflections, or insights.
 
-10. Custom Editions:
+10. Custom Editions (Coming Soon):
     - Users can choose from a variety of editions, allowing them to explore different interpretations and linguistic styles.
 
-11. Language Support:
+11. Language Support (Coming Soon):
     - Users can request verses in different languages, benefiting from translations that cater to diverse linguistic backgrounds.
 
 ### Prerequisites
