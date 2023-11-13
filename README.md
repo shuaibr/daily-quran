@@ -12,7 +12,7 @@ This tool's primary purpose is to empower Muslim individuals to learn from the q
     - The bot can send users a daily verse or reflection to promote spiritual engagement.
 
 4. Yearly Khatam (Finish reading the Quran every year) (Coming Soon):
-    - Get closer to Allah by subscribing to our Khatam program. By only reading 20 verses a day, you can finish the Quran in one year.
+    - Get closer to Allah by subscribing to our Khatam program. By only reading 20 verses a day, you can finish reading the Quran in one year.
 
 5. Chapter Overview (Coming Soon):
     - Users can get a summary or overview of a specific chapter, including its themes and key verses.

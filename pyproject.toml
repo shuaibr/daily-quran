@@ -1,0 +1,118 @@
+[tool.poetry]
+name = "discord-reminder-bot"
+version = "1.0.0"
+description = "Discord bot that allows you to set date, cron and interval reminders."
+authors = ["Joakim Hellsén <tlovinator@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/TheLovinator1/discord-reminder-bot"
+repository = "https://github.com/TheLovinator1/discord-reminder-bot"
+keywords = [
+    "bot",
+    "discord",
+    "discord-reminder-bot",
+    "discord-py-slash-command",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/TheLovinator1/discord-reminder-bot/issues"
+
+[tool.poetry.scripts]
+bot = "discord_reminder_bot.main:start"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dotenv = "^1.0.0"
+apscheduler = "^3.9.1-post.0"
+dateparser = "^1.1.4"
+sqlalchemy = "^2.0.0"
+discord-py-interactions = "^4.4.0"
+dinteractions-paginator = { git = "https://github.com/interactions-py/paginator.git", rev = "unstable" }
+discord-webhook = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 120
+select = [
+    "E",
+    "F",
+    "B",
+    "W",
+    "C90",
+    "I",
+    "N",
+    "D",
+    "UP",
+    "YTT",
+    "ANN",
+    "S",
+    "BLE",
+    "FBT",
+    "A",
+    "COM",
+    "C4",
+    "DTZ",
+    "EM",
+    "EXE",
+    "ISC",
+    "ICN",
+    "G",
+    "INP",
+    "PIE",
+    "T20",
+    "PYI",
+    "PT",
+    "Q",
+    "RSE",
+    "RET",
+    "SLF",
+    "SIM",
+    "TID",
+    "TCH",
+    "ARG",
+    "PTH",
+    "ERA",
+    "PGH",
+    "PL",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "TRY",
+    "RUF",
+]
+
+ignore = [
+    "D100",  # pydocstyle - missing docstring in public module
+    "D101",  # pydocstyle - missing docstring in public class
+    "D102",  # pydocstyle - missing docstring in public method
+    "D103",  # pydocstyle - missing docstring in public function
+    "D104",  # pydocstyle - missing docstring in public package
+    "D105",  # pydocstyle - missing docstring in magic method
+    "D106",  # pydocstyle - missing docstring in public nested class
+    "D107",  # pydocstyle - missing docstring in __init__
+    "G002",  # Allow % in logging
+    "UP031", # Allow % in logging
+]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+addopts = "-vvvvvv --exitfirst"
+filterwarnings = ["ignore::DeprecationWarning:pkg_resources:121"]
