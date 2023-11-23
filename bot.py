@@ -6,6 +6,8 @@ import sys
 import logging
 import asyncio
 import datetime, timedelta
+import typodistance
+from typodistance import typoDistance
 from datetime import datetime, timedelta
 
 from discord import app_commands
@@ -49,6 +51,23 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or('/'), intents=disco
 def get_default_chapter():
     """Returns a random chapter number within a specific range."""
     return random.randint(67, 114)
+
+def validate_edition(edition):
+    edition_list = ["eng-abdelhaleem","eng-abdulhye","eng-abdullahyusufal","eng-abdulmajiddarya","eng-abulalamaududi","eng-ahmedali","eng-aishabewley","eng-ajarberry","eng-albilalmuhammad","eng-alibakhtiarinej","eng-aliquliqarai","eng-aliquliqarai1","eng-aliunal","eng-almuntakhabfita","eng-drkamalomar","eng-drlalehbakhtiar","eng-drmunirmunshey","eng-edwardhenrypalm","eng-farookmalik","eng-georgesale","eng-hamidsaziz","eng-johnmedowsrodwe","eng-literal","eng-maududi","eng-miraneesorigina","eng-miraneesuddin","eng-mohammadhabibsh","eng-mohammadshafi","eng-mohammedmarmadu","eng-muftitaqiusmani","eng-muhammadasad","eng-muhammadmahmoud","eng-muhammadsarwar","eng-muhammadtaqiudd","eng-muhammadtaqiusm","eng-mustafakhattaba","eng-mustafakhattabg","eng-njdawood","eng-rowwadtranslati","eng-safikaskas","eng-safiurrahmanalm","eng-shabbirahmed","eng-syedvickarahame","eng-talalaitaninewt","eng-talalitani","eng-tbirving","eng-themonotheistgr","eng-themonotheistgr1","eng-thestudyquran","eng-ummmuhammad","eng-wahiduddinkhan","eng-yusufaliorig"]
+    min_dist = 100
+    min_index = 0
+    if edition and edition not in edition_list:
+        
+        for i, x in enumerate(edition_list):
+            curr_dist = typoDistance(edition, x)
+            if curr_dist < min_dist:
+                min_dist = curr_dist
+                min_index = i
+            print(edition, min_dist, curr_dist, x)
+    edition = edition_list[min_index]
+    #if not in array, check which edition is closed
+    #if min is above threshold, default to abdelhaleem
+    return edition
 
 def get_verse_markers(total_verses, verse_start, verse_end):
     """Calculates verse start and end based on user input."""
@@ -155,11 +174,13 @@ async def say(interaction: discord.Interaction, thing_to_say: str):
 async def quran(ctx,
     chapter=None,
     verse_start=None,
-    verse_end=None):
+    verse_end=None,
+    edition_name=None):
     """Command to retrieve and send Quran verses."""
     try:
-        edition_name = EDITION_FIXED
+        edition_name = validate_edition(edition_name)
         chapter = chapter or get_default_chapter()
+        print(edition_name)
 
         message = get_message(chapter, edition_name, verse_start, verse_end)
 
@@ -227,7 +248,6 @@ async def send_message(error=None):
 #         logging.error(f'An error occurred: {e}', exc_info=True)
 #         await send_message("An error occurred while processing your request.")
 
-
 async def my_background_task():
     await bot.wait_until_ready()
     
@@ -235,7 +255,7 @@ async def my_background_task():
         # Calculate time until the next occurrence of the target hour
         current_time = datetime.now()
         target_time = datetime(current_time.year, current_time.month, current_time.day, TARGET_HOUR, TARGET_MINUTE, 0)
-                
+
         if current_time >= target_time:
             target_time += timedelta(days=1)  # If the target hour has already passed, schedule for the next day
         time_until_target = target_time - current_time
